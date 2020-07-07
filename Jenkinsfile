@@ -8,6 +8,7 @@ pipeline {
     }
     stage('compile') {
       steps {
+        bat 'mvn clean'
         bat 'mvn compile'
       }
     }
