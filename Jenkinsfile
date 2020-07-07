@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+  	label 'ubuntu'
+  }
   stages {
     stage('checkout') {
       steps {
@@ -8,13 +10,13 @@ pipeline {
     }
     stage('compile') {
       steps {
-        bat 'mvn compile'
+        sh 'mvn compile'
         
       }
     }
     stage('build') {
       steps {
-        bat 'mvn test'
+        sh 'mvn test'
       }
     }
 

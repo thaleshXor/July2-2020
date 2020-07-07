@@ -50,9 +50,8 @@ public class SubmitFormClass {
 @BeforeMethod
 void setUp() {
 		
-		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe"); //for linux
-		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //for linux
-		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver"); //for windows
+		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //for windows
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver"); //for linux
 		
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("-headless");
