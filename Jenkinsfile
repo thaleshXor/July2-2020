@@ -6,17 +6,6 @@ pipeline {
         git(url: 'https://github.com/thaleshXor/July2-2020', branch: 'master')
       }
     }
-    
-    stage('compile') {
-      steps {
-        //---------Windows---
-        bat 'mvn clean'
-        bat 'mvn compile'
-        //--------linux------
-        //sh 'mvn clean'
-        //sh 'mvn compile'
-      }
-    }
 
     stage('build') {
       steps {
