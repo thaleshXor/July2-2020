@@ -10,7 +10,8 @@ pipeline {
     }
     stage('compile') {
       steps {
-        echo "$printenv"
+        echo ">>>>>>>>>>>>>"
+        echo "$PATH"
         
       }
     }
