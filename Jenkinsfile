@@ -1,6 +1,7 @@
-def m1(){
+def String m1(){
   
   println(">>>>>><<<<<<<<<<<<")
+  return "sharma"
   
 }
 
@@ -19,7 +20,7 @@ pipeline {
       steps {
         echo ">>>>>>>>>>>>>"
         echo "$HOME"
-        m1()
+        echo "thalesh ${m1()}"
       }
     }
 
