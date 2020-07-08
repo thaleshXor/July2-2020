@@ -27,9 +27,11 @@ pipeline {
           println "println: My name is : " + myName
         }
         
-        def name2="Garima " + m1()
-        echo "echo : My name is : $name2"
-        println "println: My name is : " + name2
+        script{
+          def name2="Garima " + m1()
+          echo "echo : My name is : $name2"
+          println "println: My name is : " + name2
+        }
         
       }
     }
