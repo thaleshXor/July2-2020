@@ -51,8 +51,8 @@ public class SubmitFormClass {
 void setUp() {
 		
 		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //for windows
-		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver"); //for linux
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver"); //for linux
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver"); //for linux
+		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver"); //for linux
 		
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("-headless");
