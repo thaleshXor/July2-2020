@@ -10,9 +10,8 @@ pipeline {
     }
     stage('compile') {
       steps {
-        echo ">>>>>>>>>>>>>>>>>>>>>"
-        echo "chmod 777 ${env.WORKSPACE} /jenkins"
-        //sh "chmod 777 ${workspace}/jenkins"
+        echo "workspace is : $WORKSPACE"
+        echo "pwd is : $PWD"
         
       }
     }
