@@ -1,3 +1,4 @@
+def globalVar_MyName=""
 def welcome(){
   println("I am inside method : welcome()")
 }
@@ -22,15 +23,15 @@ pipeline {
       steps {
         echo "thalesh ${m1()}"
         script{
-          def myName = "thalesh " + m1()
-          echo "echo : My name is : $myName"
-          println "println: My name is : " + myName
+          globalVar_MyName = "thalesh " + m1()
+          echo "echo : My name is : $globalVar_MyName"
+          println "println: My name is : " + globalVar_MyName
         }
         
         script{
-          def name2="Garima " + m1()
-          echo "echo : My name is : $name2"
-          println "println: My name is : " + name2
+          globalVar_MyName="Garima " + m1()
+          echo "echo : My name is : $globalVar_MyName"
+          println "println: My name is : " + globalVar_MyName
         }
         
       }
