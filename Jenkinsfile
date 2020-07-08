@@ -28,8 +28,8 @@ pipeline {
         }
         
         def name2="Garima " + m1()
-        echo "echo : My name is : $myName"
-        println "println: My name is : " + myName
+        echo "echo : My name is : $name2"
+        println "println: My name is : " + name2
         
       }
     }
