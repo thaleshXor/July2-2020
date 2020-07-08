@@ -11,7 +11,7 @@ pipeline {
     stage('compile') {
       steps {
         echo ">>>>>>>>>>>>>"
-        echo "$PATH"
+        echo "$HOME"
         
       }
     }
