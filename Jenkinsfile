@@ -31,9 +31,10 @@ pipeline {
         
         echo "echo : Thalesh Loves $myName"
         println "println : Thalesh Loves " + myName
-        echo "-------------------below statements are outside SCRIPT block-------------------------------"
+        /*
         for(int iteration=1;iteration<5;iteration++){
           echo "I am counting. And number is : $iteration"
+         */
         }
       }//steps ends
     }//stage ends
