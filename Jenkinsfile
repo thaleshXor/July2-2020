@@ -11,7 +11,7 @@ def String m1(){
 }
 
 pipeline {
-  welcome()
+  environment{welcome()}
   agent {
   	label 'ubuntu'
   }
