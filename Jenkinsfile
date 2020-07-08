@@ -1,8 +1,7 @@
-//------------variables----------
 def index=1
 def conditionMatch=false
 def myName=""
-//------------pipeline------------
+
 pipeline {
   agent {
   	label 'ubuntu'
@@ -12,23 +11,18 @@ pipeline {
       steps {
         script{
             for(int i=1;i<=5;i++){
-              
               if(index==3){
                 println "index reached to 3 ...more to come silently"
                 conditionMatch=true
-              }
-              
+              }  
               if(conditionMatch){
                 println("condition wasmatched : true. because index reached to 3")
                 myName="Garima Koushik"
               }
-
               index++
                conditionMatch=false;
             } //for ends
-          
         }//script ends
-        
         echo "echo : Thalesh Loves $myName"
         println "println : Thalesh Loves " + myName
         /*
@@ -37,7 +31,5 @@ pipeline {
         } */
       }//steps ends
     }//stage ends
-
-
   }//stages ends
 }//pipeline ends
