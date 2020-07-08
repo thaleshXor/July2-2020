@@ -1,12 +1,12 @@
 def welcome(){
   
-  println("this is welcome message. Welcome to pilepline world")
+  println("I am inside method : welcome()")
  
 }
 
 def String m1(){
   
-  println(">>>>>><<<<<<<<<<<<")
+  println("I am inside method m1(), and will return a string")
   return "sharma"
 }
 
@@ -23,11 +23,11 @@ pipeline {
     }
     stage('compile') {
       steps {
-        echo ">>>>>>>>>>>>>"
-        echo "$HOME"
-        //echo "thalesh ${m1()}"
+        echo "thalesh ${m1()}"
         script{
-          println "thalesh" + m1()
+          def myName = "thalesh " + m1()
+          echo "echo : My name is : $myName"
+          println "println: My name is : " + myName
         }
       }
     }
