@@ -10,8 +10,7 @@ pipeline {
     }
     stage('compile') {
       steps {
-        echo "workspace is : $WORKSPACE"
-        echo "pwd is : $PWD"
+        echo "$printenv"
         
       }
     }
