@@ -1,3 +1,10 @@
+def m1(){
+  
+  println(">>>>>><<<<<<<<<<<<")
+  
+}
+
+
 pipeline {
   agent {
   	label 'ubuntu'
@@ -12,7 +19,7 @@ pipeline {
       steps {
         echo ">>>>>>>>>>>>>"
         echo "$HOME"
-        
+        m1()
       }
     }
 
