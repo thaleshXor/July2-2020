@@ -29,6 +29,8 @@ pipeline {
           
         }//script ends
         
+        echo "Thalesh Loves $myName"
+        println "Thalesh Loves " + myName
       }//steps ends
     }//stage ends
 
