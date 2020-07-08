@@ -1,12 +1,17 @@
+def welcome(){
+  
+  println("this is welcome message. Welcome to pilepline world")
+ 
+}
+
 def String m1(){
   
   println(">>>>>><<<<<<<<<<<<")
   return "sharma"
-  
 }
 
-
 pipeline {
+  welcome()
   agent {
   	label 'ubuntu'
   }
@@ -20,7 +25,10 @@ pipeline {
       steps {
         echo ">>>>>>>>>>>>>"
         echo "$HOME"
-        echo "thalesh ${m1()}"
+        //echo "thalesh ${m1()}"
+        script{
+          println "thalesh" + m1()
+        }
       }
     }
 
