@@ -30,6 +30,7 @@ pipeline {
               }
 
               index++
+               conditionMatch=false;
             } //for ends
           
         }//script ends
