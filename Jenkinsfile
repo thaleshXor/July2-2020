@@ -1,7 +1,4 @@
 pipeline {
-  environment{
-    workspace=WORKSPACE
-  }
   agent {
   	label 'ubuntu'
   }
@@ -14,7 +11,7 @@ pipeline {
     stage('compile') {
       steps {
         echo ">>>>>>>>>>>>>>>>>>>>>"
-        echo "chmod 777 ${workspace}/jenkins"
+        echo "chmod 777 ${env.WORKSPACE} /jenkins"
         //sh "chmod 777 ${workspace}/jenkins"
         
       }
