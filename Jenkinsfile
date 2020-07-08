@@ -11,13 +11,13 @@ def String m1(){
 }
 
 pipeline {
-  environment{welcome()}
   agent {
   	label 'ubuntu'
   }
   stages {
     stage('checkout') {
       steps {
+        welcome()
         git(url: 'https://github.com/thaleshXor/July2-2020', branch: 'master')
       }
     }
