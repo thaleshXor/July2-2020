@@ -2,11 +2,6 @@
 def index=1
 def conditionMatch=false
 def myName=""
-//---------------method---------
-def String m1(){
-  println("I am inside method m1(), and will return a string")
-  return "sharma"
-}
 //------------pipeline------------
 pipeline {
   agent {
@@ -15,7 +10,6 @@ pipeline {
   stages{
     stage('LearningPipeline') {
       steps {
-        echo "thalesh ${m1()}"
         script{
             for(int i=1;i<=5;i++){
               
