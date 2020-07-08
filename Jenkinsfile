@@ -1,11 +1,8 @@
 def welcome(){
-  
   println("I am inside method : welcome()")
- 
 }
 
 def String m1(){
-  
   println("I am inside method m1(), and will return a string")
   return "sharma"
 }
@@ -29,6 +26,11 @@ pipeline {
           echo "echo : My name is : $myName"
           println "println: My name is : " + myName
         }
+        
+        def name2="Garima " + m1()
+        echo "echo : My name is : $myName"
+        println "println: My name is : " + myName
+        
       }
     }
 
