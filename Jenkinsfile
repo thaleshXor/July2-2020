@@ -1,4 +1,7 @@
 pipeline {
+  environment{
+    workspace=WORKSPACE
+  }
   agent {
   	label 'ubuntu'
   }
@@ -10,15 +13,13 @@ pipeline {
     }
     stage('compile') {
       steps {
-        sh 'mvn compile'
+        echo ">>>>>>>>>>>>>>>>>>>>>"
+        echo "chmod 777 ${workspace}/jenkins"
+        //sh "chmod 777 ${workspace}/jenkins"
         
       }
     }
-    stage('build') {
-      steps {
-        sh 'mvn test'
-      }
-    }
+
 
   }
 }
