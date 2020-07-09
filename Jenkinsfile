@@ -5,13 +5,8 @@ pipeline {
   }
  
   stages{
-    stage('Stage0'){
-      steps{
-        
-        echo "This is stage ZERO"
-        
-      }
-    }
+    stage('STAGE GROUP NAME'){
+
     parallel{
       //------------------------------Stage1------------------------------
         stage('Stage1:Testing on Windows-chrome') {
@@ -44,7 +39,8 @@ pipeline {
         }//stage2 ends------------------------------------------------      
       
     }//prallel block ends here 
-      
+    
+  }//stage group ends here
       
   }//stages ends
 }//pipeline ends
