@@ -5,6 +5,13 @@ pipeline {
   }
  
   stages{
+    stage('Stage0'){
+      steps{
+        
+        echo "This is stage ZERO"
+        
+      }
+    }
     parallel{
       //------------------------------Stage1------------------------------
         stage('Stage1:Testing on Windows-chrome') {
