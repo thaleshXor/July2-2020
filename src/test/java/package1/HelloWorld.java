@@ -8,11 +8,7 @@ public class HelloWorld {
 	public void displayMessage() {
 		
 		System.out.println("Hellooooooooo World !!!!!!");
-		String firstName=System.getenv("FIRSTNAME");
-		String secondName=System.getenv("SURNAME");
-		System.out.println(">>>>>>>>>>>>" + firstName + "  " + secondName + "<<<<<<<<<<<<<<<<<<<");
-		
-		
+
 		String osName=System.getProperty("os.name");
 		String browser=System.getenv("BROWSER");
 		
@@ -30,7 +26,7 @@ public class HelloWorld {
 			
 			System.out.println("*************I am running on CHROME **************");
 		}
-		else if(osName.toUpperCase().contains("FIREFOX")) {
+		else if(browser.toUpperCase().contains("FIREFOX")) {
 			
 			System.out.println("*************I am running on FIREFOX **************");
 		}		
