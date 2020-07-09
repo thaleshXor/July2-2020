@@ -18,9 +18,9 @@ pipeline {
             BROWSER='chrome'
           }
           steps {
-            echo "-------------TEST STARTS-----------------"
+            echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS On Windows Chrome -----------------"
             echo "ECHO : Test running on ${env.BROWSER}"
-            sh 'mvn test'
+            bat 'mvn test'
           }//steps ends
         }//stage1 ends------------------------------------------------
       
@@ -33,7 +33,7 @@ pipeline {
             BROWSER='firefox'
           }
           steps {
-            echo "-------------TEST STARTS-----------------"
+            echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS on ubuntu Firefox-----------------"
             echo "ECHO : Test running on ${env.BROWSER}"
             sh 'mvn test'
           }//steps ends
