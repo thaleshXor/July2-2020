@@ -9,7 +9,7 @@ public class HelloWorld {
 		
 		System.out.println("Hellooooooooo World !!!!!!");
 		String firstName=System.getenv("FIRSTNAME");
-		String secondName=System.getenv("LASTNAME");
+		String secondName=System.getenv("SURNAME");
 		System.out.println(">>>>>>>>>>>>" + firstName + "  " + secondName + "<<<<<<<<<<<<<<<<<<<");
 	}
 }
