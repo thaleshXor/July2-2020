@@ -14,11 +14,9 @@ pipeline {
           agent{
             label 'master'
           }
-          
-          steps{
-            echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
-          }
+
           environment{
+            echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
             BROWSER='chrome'
             JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
           }
