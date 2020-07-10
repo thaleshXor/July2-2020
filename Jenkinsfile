@@ -21,7 +21,7 @@ pipeline {
           environment{
             
             BROWSER='chrome'
-            JAVA_HOME=$JAVA_HOME
+            JAVA_HOME="$JAVA_HOME"
           }
           steps {
             
