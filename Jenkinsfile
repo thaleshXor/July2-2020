@@ -29,7 +29,7 @@ pipeline {
             echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $VAR_JAVA"
             echo "ECHO inside Windows AFTER JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
             echo "ECHO : Test running on ${env.BROWSER}"
-            bat 'mvn test'
+            bat 'mvn test -Dbrowser=chrome -DosName=windows'
           }//steps ends
         }//stage1 ends------------------------------------------------
       
@@ -43,7 +43,7 @@ pipeline {
              withEnv(["BROWSER=firefox"]) { 
               echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS on ubuntu Firefox-----------------"
               echo "ECHO : stage2:: Test running on ${env.BROWSER}"
-              sh 'mvn test -e'
+              sh 'mvn test -Dbrowser=firefox -DosName=linux -e'
                
              }//withEnv ends here
           }//steps ends
