@@ -14,12 +14,17 @@ pipeline {
           agent{
             label 'master'
           }
+          
+          steps{
+            echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
+          }
           environment{
             BROWSER='chrome'
             JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
           }
           steps {
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS On Windows Chrome -----------------"
+            echo "ECHO inside Windows AFTER JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
             echo "ECHO : Test running on ${env.BROWSER}"
             bat 'mvn test'
           }//steps ends
@@ -36,7 +41,7 @@ pipeline {
           steps {
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS on ubuntu Firefox-----------------"
             echo "ECHO : Test running on ${env.BROWSER}"
-            sh 'mvn test'
+            sh 'mvn test -e'
           }//steps ends
         }//stage2 ends------------------------------------------------      
       
