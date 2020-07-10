@@ -3,40 +3,37 @@ package package1;
 import org.testng.annotations.Test;
 
 public class HelloWorld {
-	String browser="";
+	
 	@Test
 	public void displayMessage() {
 		
 		System.out.println("Hellooooooooo World !!!!!!");
 
-		String osName=System.getProperty("os.name");
-		//String browser=System.getenv("BROWSER");
+		String osName=System.getProperty("osName");
+		String browser=System.getProperty("browser");
 		
-		if(osName.toUpperCase().contains("WINDOWS")) {
+		if(osName.toUpperCase().equalsIgnoreCase("WINDOWS")) {
 			
 			System.out.println("*************I am running on WINDOWS **************");
 			browser=System.getenv("BROWSER");
 		}
-		else if(osName.toUpperCase().contains("LINUX")) {
+		else if(osName.toUpperCase().equalsIgnoreCase("LINUX")) {
 			
 			System.out.println("*************I am running on LINUX **************");
-
-			browser=System.getenv("BROWSER");
 
 			System.out.println("***************************Temp : BrowserName : " + browser);
 
 		}
-		
-		if(browser!=null) {
-	        if(browser.toUpperCase().contains("CHROME")) {
-				
-				System.out.println("*************I am running on CHROME **************");
-			}
-		}
-		else {
+	
+        if(browser.toUpperCase().contains("CHROME")) {
 			
-			System.out.println("*************BROWSER IS NULL**************");
+			System.out.println("*************I am running on CHROME **************");
 		}
+        else if(browser.toUpperCase().contains("FIREFOX")) {
+			
+			System.out.println("*************I am running on FIREFOX **************");
+		}
+
 		
 	}
 }
