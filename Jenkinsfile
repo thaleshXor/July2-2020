@@ -18,8 +18,9 @@ pipeline {
           environment{
             
             BROWSER='chrome'
-            JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
             VAR_JAVA="$JAVA_HOME"
+            JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
+            
           }
           steps {
             
