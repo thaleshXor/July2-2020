@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -45,24 +47,37 @@ public class SubmitFormClass {
 	private static String xpath_UploadImage="//input[@name='photo']";
 	private static String xpath_Submit="//button[@name='submit']";
 	
-	
+	String osName=System.getProperty("osName");
+	String browser=System.getProperty("browser");
 
 @BeforeMethod
 void setUp() {
+	
+		if(osName.equalsIgnoreCase("windows")) {
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		}
+		else if(osName.equalsIgnoreCase("linux")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+		}
 		
-		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe"); //for windows
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver"); //for linux
-		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver"); //for linux
-		
-		ChromeOptions options=new ChromeOptions();
-		options.addArguments("-headless");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-dev-shm-usage");
-		
-		System.out.println("---------------------------Launch browser-----------------------");
-		driver=new ChromeDriver(options);
-		
-}	
+		if(browser.equalsIgnoreCase("chrome")) {
+			
+			ChromeOptions options=new ChromeOptions();
+			options.addArguments("-headless");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			driver=new ChromeDriver(options);
+			
+		}
+		else if(browser.equalsIgnoreCase("firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("-headless");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			driver=new FirefoxDriver(options);
+		}
+				
+    }	
 
 @AfterMethod
 void tearDown() {
