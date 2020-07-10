@@ -12,6 +12,8 @@ public class HelloWorld {
 		String osName=System.getProperty("osName");
 		String browser=System.getProperty("browser");
 		
+		System.out.println("Fetched vakues are - osName: " + osName + " browser name : " + browser);
+		
 		if(osName.toUpperCase().equalsIgnoreCase("WINDOWS")) {
 			
 			System.out.println("*************I am running on WINDOWS **************");
