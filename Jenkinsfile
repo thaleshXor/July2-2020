@@ -14,9 +14,6 @@ pipeline {
           agent{
             label 'master'
           }
-          script{
-            
-          }
 
           environment{
             
