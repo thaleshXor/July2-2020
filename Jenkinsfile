@@ -21,15 +21,14 @@ pipeline {
           environment{
             
             BROWSER='chrome'
-            JAVA_HOME="$JAVA_HOME"
+            JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
+            VAR_JAVA="JAVA_HOME"
           }
           steps {
             
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS On Windows Chrome -----------------"
             
-            echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
-            
-            JAVA_HOME='C:/Program Files/Java/jdk1.8.0_231'
+            echo "ECHO inside Windows BEFORE JAVAHOMEPATH setup , value of JAVA_HOME is : $VAR_JAVA"
             echo "ECHO inside Windows AFTER JAVAHOMEPATH setup , value of JAVA_HOME is : $JAVA_HOME"
             echo "ECHO : Test running on ${env.BROWSER}"
             bat 'mvn test'
