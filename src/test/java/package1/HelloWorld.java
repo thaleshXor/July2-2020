@@ -17,21 +17,19 @@ public class HelloWorld {
 		if(osName.toUpperCase().equalsIgnoreCase("WINDOWS")) {
 			
 			System.out.println("*************I am running on WINDOWS **************");
-			browser=System.getenv("BROWSER");
+		
 		}
 		else if(osName.toUpperCase().equalsIgnoreCase("LINUX")) {
 			
 			System.out.println("*************I am running on LINUX **************");
 
-			System.out.println("***************************Temp : BrowserName : " + browser);
-
 		}
 	
-        if(browser.toUpperCase().contains("CHROME")) {
+        if(browser.toUpperCase().equalsIgnoreCase("chrome")) {
 			
 			System.out.println("*************I am running on CHROME **************");
 		}
-        else if(browser.toUpperCase().contains("FIREFOX")) {
+        else if(browser.toUpperCase().equalsIgnoreCase("firefox")) {
 			
 			System.out.println("*************I am running on FIREFOX **************");
 		}
