@@ -38,14 +38,16 @@ pipeline {
           agent{
             label 'ubuntu'
           }
-          environment{
-            BROWSER='firefox'
-          }
+        withEnv(["BROWSER=firefox"]) { 
+   
           steps {
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS on ubuntu Firefox-----------------"
             echo "ECHO : Test running on ${env.BROWSER}"
             sh 'mvn test -e'
           }//steps ends
+          
+        }//withEnv ends here
+          
         }//stage2 ends------------------------------------------------      
       
     }//prallel block ends here 
