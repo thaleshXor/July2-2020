@@ -20,18 +20,19 @@ public class HelloWorld {
 		else if(osName.toUpperCase().contains("LINUX")) {
 			
 			System.out.println("*************I am running on LINUX **************");
+
 			browser=System.getenv("BROWSER");
+
+			System.out.println("***************************Temp : BrowserName : " + browser);
+
 		}
 		
 		
-		if(browser.toUpperCase().contains("CHROME")) {
+               if(browser.toUpperCase().contains("CHROME")) {
 			
 			System.out.println("*************I am running on CHROME **************");
 		}
-		else if(browser.toUpperCase().contains("FIREFOX")) {
-			
-			System.out.println("*************I am running on FIREFOX **************");
-		}		
+		
 		
 	}
 }
