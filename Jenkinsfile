@@ -42,7 +42,7 @@ pipeline {
    
           steps {
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS on ubuntu Firefox-----------------"
-            echo "ECHO : Test running on ${env.BROWSER}"
+            echo "ECHO : stage2:: Test running on ${env.BROWSER}"
             sh 'mvn test -e'
           }//steps ends
           
