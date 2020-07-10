@@ -27,12 +27,16 @@ public class HelloWorld {
 
 		}
 		
-		
-               if(browser.toUpperCase().contains("CHROME")) {
-			
-			System.out.println("*************I am running on CHROME **************");
+		if(browser!=null) {
+	        if(browser.toUpperCase().contains("CHROME")) {
+				
+				System.out.println("*************I am running on CHROME **************");
+			}
 		}
-		
+		else {
+			
+			System.out.println("*************BROWSER IS NULL**************");
+		}
 		
 	}
 }
