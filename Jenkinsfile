@@ -18,6 +18,7 @@ pipeline {
             
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS On Windows Chrome -----------------"
             bat 'mvn test -Dbrowser=chrome -DosName=windows'
+            //comment #0
             
           }//steps ends
         }//stage1 ends------------------------------------------------
@@ -26,6 +27,8 @@ pipeline {
         stage('Stage2:Testing on Ubuntu-firefox') {
           agent{
             label 'ubuntu'
+            //comment #1
+            //comment #2
           }
    
           steps {
