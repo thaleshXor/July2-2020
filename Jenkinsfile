@@ -19,6 +19,7 @@ pipeline {
             echo "-------------jenkinsFile-Hardcoded messgae:::TEST STARTS On Windows Chrome -----------------"
             bat 'mvn test -Dbrowser=chrome -DosName=windows'
 	    //this is comment 4
+            //comment #0
             
           }//steps ends
         }//stage1 ends------------------------------------------------
@@ -30,6 +31,8 @@ pipeline {
 	    //this is comment 1
 	    // this is comment 2
 	    //this is comment 3
+            //comment #1
+            //comment #2
           }
    
           steps {
